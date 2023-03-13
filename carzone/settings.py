@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-32&0=@o^#k3en#gxox-s2%d8p)3)b8#r$xf1-8ts*@5&718(#-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["carzone.ge", "carzoneapp.ge"]
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
