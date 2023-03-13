@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% block title %} | Our Cars Inventory {% endblock %}
 {% block content %}
 {% load humanize %}
 <!-- Sub banner start -->
@@ -8,7 +8,7 @@
         <div class="breadcrumb-areas">
             <h1>Our Car Inventory</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url "home" %}">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li class="active">Cars</li>
             </ul>
         </div>

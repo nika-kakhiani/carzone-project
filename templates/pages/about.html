@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% block title %} | About Us {% endblock %}
 {% block content %}
 
 <!-- Sub banner start -->
@@ -87,7 +87,7 @@
                     <div class="team-1">
                         <div class="photo">
                             <a href="#">
-                                <img src="{{team.photo.url}}" alt="team-1" class="img-fluid">
+                                <img src="{{team.photo.url}}" alt="team-1" class="img-fluid" style="min-height: 150px; max-height: 150px">
                             </a>
                             <div class="social-list clearfix">
                                 <a href="{{team.facebook_link}}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a>

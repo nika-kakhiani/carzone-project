@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load humanize %}
-
-
+{% block title %} | Search Result {% endblock %}
 
 {% block content %}
 
@@ -11,7 +10,7 @@
         <div class="breadcrumb-areas">
             <h1>Search Results</h1>
             <ul class="breadcrumbs">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li class="active">Search</li>
             </ul>
         </div>
@@ -24,12 +23,12 @@
     <div class="container">
         <div class="search-area-inner">
             <div class="search-contents">
-                <form method="GET" action="{% url 'search' %}">
+                <form action="{% url 'search' %}" method="GET">
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="model">
-                                    <option>Select Model</option>
+                                    <option selected="true" disabled="disabled">Select Model</option>
                                     {% for model in model_search %}
                                       <option value="{{model}}">{{model}}</option>
                                     {% endfor %}
@@ -39,7 +38,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="city">
-                                    <option>Select Location</option>
+                                    <option selected="true" disabled="disabled">Select Location</option>
                                     {% for city in city_search %}
                                       <option value="{{city}}">{{city}}</option>
                                     {% endfor %}
@@ -49,7 +48,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="year">
-                                    <option>Select Year</option>
+                                    <option selected="true" disabled="disabled">Select Year</option>
                                     {% for year in year_search %}
                                       <option value="{{year}}">{{year}}</option>
                                     {% endfor %}
@@ -61,7 +60,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="body_style">
-                                    <option>Select Type Of Car</option>
+                                    <option selected="true" disabled="disabled">Select Type Of Car</option>
                                     {% for body_style in body_style_search %}
                                       <option value="{{body_style}}">{{body_style}}</option>
                                     {% endfor %}
@@ -71,7 +70,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="transmission">
-                                    <option>Transmission</option>
+                                    <option selected="true" disabled="disabled">Transmission</option>
                                     {% for transmission in transmission_search %}
                                       <option value="{{transmission}}">{{transmission}}</option>
                                     {% endfor %}

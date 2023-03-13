@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block title %} | Home {% endblock %}
+
 {% block content %}
 {% load humanize %}
 {% load static %}
@@ -309,7 +311,7 @@
                             </div>
                         </div>
                         <div class="details">
-                            <h4><a href="team-detail.html">{{team.first_name}} {{team.last_name}}</a></h4>
+                            <h4><a>{{team.first_name}} {{team.last_name}}</a></h4>
                             <h5>{{team.designation}}</h5>
                         </div>
                     </div>
@@ -350,7 +352,7 @@
 </div>
 
 <!-- Car Overview Modal -->
-<div class="car-model-2">
+<!-- <div class="car-model-2">
     <div class="modal fade" id="carOverviewModal" tabindex="-1" role="dialog" aria-labelledby="carOverviewModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -421,6 +423,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 {% endblock %}

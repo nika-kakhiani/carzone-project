@@ -28,12 +28,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = 'dashboard'
+
 
 # Application definition
 
 INSTALLED_APPS = [
     "cars.apps.CarsConfig",
     "pages.apps.PagesConfig",
+    "accounts.apps.AccountsConfig",
+    "contacts.apps.ContactsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -42,6 +46,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "ckeditor",
     "django.contrib.humanize",
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+
+    "allauth.socialaccount.providers.facebook",
+    "allauth.socialaccount.providers.google",
 ]
 
 MIDDLEWARE = [
@@ -80,7 +91,7 @@ WSGI_APPLICATION = "carzone.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": "carzone_db",
         "USER": "postgres",
         "PASSWORD": "chaqucha",
@@ -130,3 +141,17 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+SITE_ID = 1
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "djangotest1121@gmail.com"
+EMAIL_HOST_PASSWORD = "djangotest123"
+EMAIL_USE_TLS = True
