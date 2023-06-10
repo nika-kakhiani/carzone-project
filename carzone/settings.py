@@ -157,7 +157,7 @@ SITE_ID = 1
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "djangotest1121@gmail.com"
-EMAIL_HOST_PASSWORD = "djangotest123"
+EMAIL_HOST_PASSWORD = "aburmofnzsmlwzls"
 EMAIL_USE_TLS = True
 
 
